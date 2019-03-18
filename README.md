@@ -78,14 +78,14 @@ public T Max<T>(T a, T b)
     return a > b ? a : b;
 }
 ```
-However this won’t work, as the complier doesn’t know the type of T. So it can’t compare the two objects. As they are both objects. We need to assume both A and B implement the IComparable interface. Which is an example of a constraint. 
+However this wonâ€™t work, as the complier doesnâ€™t know the type of T. So it canâ€™t compare the two objects. As they are both objects. We need to assume both A and B implement the IComparable interface. Which is an example of a constraint. 
 ```sh
 public T Max<T>(T a, T b)  where T : IComparable
 {
     return a.CompareTo(b) > 0 ? a : b;
 }
 ```
-Also the generic function is in a none generic class. The class doesn’t have to be generic. You can also change this to class level.
+Also the generic function is in a none generic class. The class doesnâ€™t have to be generic. You can also change this to class level.
 ```sh  
 public class Utilities<T> where T : IComparable
 {
@@ -101,11 +101,11 @@ public class Utilities<T> where T : IComparable
 }
 ```
 # Other comparables.
-Where T : IComparable – As implying a constraint to an interface.
-Where T : Product – Imply a constraint to a class, in this example we are saying if T is a Product or any of its children or sub classes. 
-Where T : struct – We can say T is a value type
-Where T: class – It has to be a reference type
-Where T: new() – Is an object that has a default constructor.
+Where T : IComparable â€“ As implying a constraint to an interface.
+Where T : Product â€“ Imply a constraint to a class, in this example we are saying if T is a Product or any of its children or sub classes. 
+Where T : struct â€“ We can say T is a value type
+Where T: class â€“ It has to be a reference type
+Where T: new() â€“ Is an object that has a default constructor.
 # Constraint to a class
 ```sh
 public class Product
@@ -127,7 +127,7 @@ public class DiscountCalculator<TProduct> where TProduct : Product
 As the discount calculator is constraint to the Product class, we have access to all of its properties and can return the product price or do a discount calculation.
 
 Constraint to Value Type
-In C# value types can’t be null, we can create a nullable class to allow our value types to be null.
+In C# value types canâ€™t be null, we can create a nullable class to allow our value types to be null.
 ```sh
 public class Nullable<T> where T : struct
 {
@@ -166,17 +166,17 @@ var number = new Nullable<int>(1);
 Console.WriteLine("Has Value ?" + number.HasValue);
 Console.WriteLine("Value = " + number.GetValueOrDefault());
 ```            
-If we don’t pass a number in, it will return 0.
+If we donâ€™t pass a number in, it will return 0.
 ```sh
 var number = new Nullable<int>();
 Console.WriteLine("Has Value ?" + number.HasValue);
 Console.WriteLine("Value = " + number.GetValueOrDefault());
 ```
-We don’t’ need to create this in .NET as it already exists.  
+We donâ€™tâ€™ need to create this in .NET as it already exists.  
  
 
 # Constraint new()
-The below code won’t work unless we create a constraint as it the compler doesn’t know what type of object it is.
+The below code wonâ€™t work unless we create a constraint as it the compler doesnâ€™t know what type of object it is.
 ```sh
 public void DoSomething(T value)
 {
@@ -188,3 +188,7 @@ You can add multiple constraints to a class, so we can also add that it needs a 
 public class Utilities<T> where T : IComparable, new()
 ```
 The above is now valid.
+
+References
+
+<a href="https://www.youtube.com/watch?v=gyal6TbgmSU">Programming with Mosh</a>
