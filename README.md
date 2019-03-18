@@ -1,0 +1,2 @@
+# Generics
+Example of Generics
