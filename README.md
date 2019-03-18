@@ -35,6 +35,7 @@ The above generic list would allow us to use this list for multiple things.
 ```sh    
 var numnbers = new GenericList<int>();
 numnbers.Add(1);
+```
 ```sh
 var films = new GenericList<Film>();
 films.Add(film);
