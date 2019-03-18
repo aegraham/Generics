@@ -1,0 +1,7 @@
+C:\Projects\learning\Generics\Generics\bin\Debug\Generics.exe.config
+C:\Projects\learning\Generics\Generics\bin\Debug\Generics.exe
+C:\Projects\learning\Generics\Generics\bin\Debug\Generics.pdb
+C:\Projects\learning\Generics\Generics\obj\Debug\Generics.csprojAssemblyReference.cache
+C:\Projects\learning\Generics\Generics\obj\Debug\Generics.csproj.CoreCompileInputs.cache
+C:\Projects\learning\Generics\Generics\obj\Debug\Generics.exe
+C:\Projects\learning\Generics\Generics\obj\Debug\Generics.pdb
